@@ -1,0 +1,94 @@
+.kioskGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0px 4%;
+  place-items: flex-start center;
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  padding: 40px 4%;
+  border: 4px solid var(--red);
+  border-radius: 8px;
+  margin: 0px 4%;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kioskInformations {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h1 {
+    font-size: 2rem;
+    color: var(--red);
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--gray-900);
+    transition: var(--transition);
+    align-self: flex-start;
+
+    &:hover {
+      transform: scale(1.05);
+      color: var(--blue);
+    }
+  }
+
+  .return {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    align-self: flex-start;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    &:hover {
+      transform: scale(1.05);
+      color: var(--white);
+    }
+  }
+}
+
+.sellersContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.sellerInformations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  .sellerName {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.25rem;
+  }
+
+  a {
+    text-decoration: none;
+    svg {
+      fill: #25d366;
+      transition: var(--transition);
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+}
